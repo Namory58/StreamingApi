@@ -22,6 +22,7 @@ router.get("/:id", (req, res) => {
       "Accept-Ranges": "bytes",
       "Content-Length": chunksize,
       "Content-Type": "audio/mpeg",
+      
     };
     res.writeHead(206, head);
     file.pipe(res);
